@@ -42,7 +42,7 @@ def analyze_stock_trend(prediction):
 
 # Streamlit app
 def main():
-    st.title("Stock Trend Analysis Chatbot")
+    st.title("Stock Trend Analysis Bot")
 
     choice = st.sidebar.selectbox("Choose an option", ["Upload Image", "Exit"])
 
