@@ -29,8 +29,8 @@ The app uses a simple CNN model built with TensorFlow/Keras:
 1. **Clone the repository**
 
 ```bash
-git clone https://github.com/your-username/stock-trend-analysis-bot.git
-cd stock-trend-analysis-bot
+git clone https://github.com/vanshgurnani/profit-pandit.git
+cd profit-pandit
 ```
 
 2. **Install dependencies**
