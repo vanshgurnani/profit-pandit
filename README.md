@@ -1,96 +1,118 @@
-# 📈 Stock Trend Analysis Bot
+# Stock Trend Analysis Telegram Bot
 
-A **Streamlit** web app that uses a **Convolutional Neural Network (CNN)** to predict stock price direction based on candlestick chart images. This tool allows users to upload an image of a candlestick chart and receive a prediction indicating whether the stock is expected to go up or down.
+A Telegram bot that analyzes candlestick patterns from images to predict stock trends using advanced AI technology.
 
----
+## Features
 
-## 🚀 Features
+- 🤖 **Telegram Bot**: Easy-to-use bot interface
+- 📸 **Image Analysis**: Upload candlestick chart images
+- 📊 **AI Predictions**: Uses trained neural network
+- 🧠 **Gemini AI Integration**: Enhanced analysis and responses
+- 🎯 **Commands**: Built-in commands for better UX
+- 🌐 **Flask API**: Webhook support for production
 
-- Upload candlestick chart images (`.jpg`, `.jpeg`, `.png`)
-- Predicts whether the stock trend is **up** or **down**
-- Powered by a CNN trained on candlestick chart patterns
-- Clean and interactive Streamlit user interface
+## Setup
 
----
-
-## 🧠 Model Architecture
-
-The app uses a simple CNN model built with TensorFlow/Keras:
-
-- Conv2D layers with ReLU activation
-- MaxPooling for downsampling
-- Dense layers for prediction
-- Sigmoid activation for binary classification (up/down)
-
----
-
-## 📦 Installation
-
-1. **Clone the repository**
-
-```bash
-git clone https://github.com/vanshgurnani/profit-pandit.git
-cd profit-pandit
-```
-
-2. **Install dependencies**
-
-We recommend using a virtual environment:
-
+### 1. Install Dependencies
 ```bash
 pip install -r requirements.txt
 ```
 
-3. **Add the model weights**
+### 2. Create Environment File
+Create a `.env` file in the project root:
+```env
+TELEGRAM_BOT_TOKEN=your_bot_token_here
+GEMINI_API_KEY=your_gemini_api_key_here
+PORT=5000
+FLASK_DEBUG=False
+```
 
-Ensure you have a file named `candlestick_model_weights.h5` in the root directory. This file contains the pre-trained weights for the CNN model.
+### 3. Get API Keys
+1. **Telegram Bot Token**: Message [@BotFather](https://t.me/botfather) on Telegram
+2. **Gemini API Key**: Get from [Google AI Studio](https://makersuite.google.com/app/apikey)
 
----
+## Running the Bot
 
-## ▶️ Running the App
-
-Start the Streamlit app with the following command:
-
+### Option 1: Direct Bot (Polling)
 ```bash
-streamlit run app.py
+python bot.py
 ```
 
-The app will launch in your browser. Use the sidebar to upload candlestick chart images and receive trend predictions.
-
----
-
-## 🗂️ Project Structure
-
-```
-.
-├── app.py                     # Main Streamlit app
-├── candlestick_model_weights.h5  # Trained model weights (required)
-├── requirements.txt           # Python dependencies
-└── README.md                  # Project documentation
-```
-
----
-
-## 📝 Example Usage
-
-1. Launch the app.
-2. Upload an image of a candlestick chart.
-3. The app predicts and displays whether the stock will go **up** or **down**.
-
----
-
-## 🔧 Requirements
-
-- Python 3.7+
-- TensorFlow
-- NumPy
-- OpenCV
-- Streamlit
-
-Install via:
-
+### Option 2: Flask App (Webhook)
 ```bash
-pip install streamlit opencv-python tensorflow numpy
+python app.py
 ```
 
----
+## Bot Commands
+
+- `/start` - Welcome message and instructions
+- `/help` - Show all available commands
+- `/analyze` - Analyze candlestick chart image
+- `/info` - Bot information and capabilities
+- `/status` - Check bot status
+
+## How to Use
+
+1. **Start the bot** with `/start`
+2. **Send a candlestick chart image** to get AI analysis
+3. **Get comprehensive analysis** with detailed insights and recommendations
+
+## AI Features
+
+### Gemini AI Integration
+- **Enhanced Analysis**: Detailed market insights and recommendations
+- **Professional Insights**: Expert-level trading analysis
+- **Risk Assessment**: Comprehensive risk evaluation
+- **Trading Recommendations**: Actionable trading advice
+- **Confidence Explanations**: Detailed confidence level analysis
+
+### Neural Network Analysis
+- **Trend Prediction**: Up/Down predictions
+- **Confidence Scoring**: High/Medium/Low confidence levels
+- **Image Processing**: Advanced computer vision analysis
+
+## API Endpoints
+
+- `GET /` - API information
+- `GET /health` - Health check
+- `POST /webhook` - Telegram webhook
+
+## Files
+
+- `bot.py` - Main Telegram bot with Gemini integration
+- `gemini_helper.py` - Gemini AI helper functions
+- `commands.py` - Bot commands and messages
+- `app.py` - Flask API server
+- `main.py` - Original Streamlit app
+- `requirements.txt` - Python dependencies
+- `.env` - Environment variables (create this)
+- `.gitignore` - Git ignore rules
+
+## Sample Images
+
+### Result Directory (`/result/`)
+Contains sample candlestick chart images that have been analyzed by the bot:
+- `photo_2025-07-12_10-35-24.jpg` - Sample candlestick chart analysis
+- `photo_2025-07-12_10-35-23.jpg` - Sample candlestick chart analysis  
+- `photo_2025-07-12_09-46-55.jpg` - Sample candlestick chart analysis
+
+## Gemini AI Setup
+
+1. **Get API Key**: Visit [Google AI Studio](https://makersuite.google.com/app/apikey)
+2. **Create API Key**: Generate a new API key
+3. **Add to .env**: `GEMINI_API_KEY=your_key_here`
+4. **Restart Bot**: The bot will automatically enable Gemini features
+
+## Analysis Features
+
+The bot provides comprehensive analysis including:
+- **Trend Analysis**: Price movement expectations and timeframe considerations
+- **Confidence Assessment**: Reliability and factors affecting predictions
+- **Technical Insights**: Pattern recognition, support/resistance levels
+- **Risk Assessment**: Potential risks and position sizing advice
+- **Trading Recommendations**: Entry/exit strategies and risk management
+- **Action Items**: Specific next steps and confirmation signals
+
+## Disclaimer
+
+This bot is for educational purposes only. Always conduct your own research before making investment decisions. The predictions are based on historical patterns and should not be considered as financial advice.
