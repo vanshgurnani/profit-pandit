@@ -92,9 +92,11 @@ python app.py
 
 ### Result Directory (`/result/`)
 Contains sample candlestick chart images that have been analyzed by the bot:
-- `photo_2025-07-12_10-35-24.jpg` - Sample candlestick chart analysis
-- `photo_2025-07-12_10-35-23.jpg` - Sample candlestick chart analysis  
-- `photo_2025-07-12_09-46-55.jpg` - Sample candlestick chart analysis
+![photo_2025-07-12_09-46-55](https://github.com/user-attachments/assets/9d97805b-8d31-4f89-820f-93b6262e3558)
+![photo_2025-07-12_10-35-23](https://github.com/user-attachments/assets/c1157382-30a4-41e7-b280-a327e150349b)
+![photo_2025-07-12_10-35-24](https://github.com/user-attachments/assets/08ad07b0-0612-48f9-8371-9d9ce0499bb6)
+
+
 
 ## Gemini AI Setup
 
